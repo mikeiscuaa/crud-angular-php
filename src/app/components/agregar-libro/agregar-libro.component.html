@@ -4,7 +4,7 @@
         Agregar libros
     </div>
     <div class="card-body">
-        <form>
+        <form (ngSubmit)="enviarDatos()" [formGroup]="formularioDeLibros">
             <!-- bs5-form-input -->
             <div class="mb-3">
                 <label for="" class="form-label">Isbn</label>

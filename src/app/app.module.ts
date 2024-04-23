@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { AgregarLibroComponent } from './components/agregar-libro/agregar-libro.component';
 import { EditarLibroComponent } from './components/editar-libro/editar-libro.component';
 import { ListarLibroComponent } from './components/listar-libro/listar-libro.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,11 @@ import { ListarLibroComponent } from './components/listar-libro/listar-libro.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
   providers: [
     provideClientHydration()
