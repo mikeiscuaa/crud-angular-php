@@ -10,10 +10,14 @@ import { Libro } from './Libros';
 export class CrudService {
   API: string = "http://localhost/libros/";
 
-  constructor(private clienteHttp: HttpClient) {}
-    
-  AgregarLibro(datoslibro: Libro){
+  constructor(private clienteHttp: HttpClient) { }
+
+  AgregarLibro(datoslibro: Libro) {
     return this.clienteHttp.post(this.API + "?insertar=1", datoslibro);
-    }
-   
+  }
+  ObtenerLibros() {
+    return this.clienteHttp.get(this.API);
+  }
+
+
 }

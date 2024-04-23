@@ -18,13 +18,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td scope="row">1</td>
-                        <td>El principito</td>
-                        <td>Nicolas Maquiavelo</td>
-                        <td>2023</td>
-                        <td>Mc Graw Hill</td>
-                        <td><a routerLink="/editar-libro/1" class="btn btn-success">Editar</a> | 
+                    <tr *ngFor="let li of Libros; let iControl=index">
+                        <td scope="row">{{li.isbn}}</td>
+                        <td>{{li.titulo}}</td>
+                        <td>{{li.autor}}</td>
+                        <td>{{li.anio}}</td>
+                        <td>{{li.editorial}}</td>
+                        <td><a routerLink="/editar-libro/{{li.isbn}}" class="btn btn-success">Editar</a> | 
                             <a class="btn btn-danger">Borrar</a></td>
                     </tr>
                 </tbody>
