@@ -1,0 +1,35 @@
+<!-- bs5-card-head-foot -->
+<div class="card">
+    <div class="card-header">
+        Lista de libros en existencia
+    </div>
+    <div class="card-body">
+        <!-- bs5-table-default -->
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">ISBN</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Año</th>
+                        <th scope="col">Editorial</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">1</td>
+                        <td>El principito</td>
+                        <td>Nicolas Maquiavelo</td>
+                        <td>2023</td>
+                        <td>Mc Graw Hill</td>
+                        <td><a routerLink="/editar-libro/1" class="btn btn-success">Editar</a> | 
+                            <a class="btn btn-danger">Borrar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

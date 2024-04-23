@@ -1,0 +1,46 @@
+<!-- bs5-card-head-foot -->
+<div class="card mt-4">
+    <div class="card-header">
+        Agregar libros
+    </div>
+    <div class="card-body">
+        <form>
+            <!-- bs5-form-input -->
+            <div class="mb-3">
+                <label for="" class="form-label">Isbn</label>
+                <input formControlName="isbn" type="text" class="form-control" aria-describedby="helpId"
+                    placeholder="Ingresa el isbn del libro">
+                <!-- <small id="helpId" class="form-text text-muted">*Titulo del libro</small> -->
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Título</label>
+                <input formControlName="titulo" type="text" class="form-control" aria-describedby="helpId"
+                    placeholder="Ingresa el titulo del libro">
+                <!-- <small id="helpId" class="form-text text-muted">*Titulo del libro</small> -->
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Autor</label>
+                <input formControlName="autor" type="text" class="form-control" aria-describedby="helpId"
+                    placeholder="Ingresa el nombre del autor">
+                <!-- <small id="helpId" class="form-text text-muted">*Autor del libro</small> -->
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Año</label>
+                <input formControlName="anio" type="text" class="form-control" aria-describedby="helpId"
+                    placeholder="Ingresa el año de edicion del libro">
+                <!-- <small id="helpId" class="form-text text-muted">*Año de edición del libro</small> -->
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Editorial</label>
+                <input formControlName="editorial" type="text" class="form-control" aria-describedby="helpId"
+                    placeholder="Ingresa la editorial del libro">
+                <!-- <small id="helpId" class="form-text text-muted">*Editorial</small> -->
+            </div>
+            <!-- bs5-bgroup-default -->
+            <div class="btn-group" role="group" aria-label="Button group name">
+                <button type="submit" class="btn btn-success">Agregar</button>
+                <button type="button" class="btn btn-danger ms-3" routerLink="/listar-libro">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
