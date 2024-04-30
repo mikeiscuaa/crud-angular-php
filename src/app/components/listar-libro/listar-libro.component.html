@@ -18,18 +18,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let li of Libros; let iControl=index">
-                        <td scope="row">{{li.isbn}}</td>
-                        <td>{{li.titulo}}</td>
-                        <td>{{li.autor}}</td>
-                        <td>{{li.anio}}</td>
-                        <td>{{li.editorial}}</td>
-                        <td><a routerLink="/editar-libro/{{li.isbn}}" class="btn btn-success">Editar</a> | 
-                            <a class="btn btn-danger">Borrar</a></td>
-                    </tr>
+                    @for(lib of Libros; track lib; let iControl=$index){
+                        <tr>
+                            <td scope="row">{{lib.isbn}}</td>
+                            <td>{{lib.titulo}}</td>
+                            <td>{{lib.autor}}</td>
+                            <td>{{lib.anio}}</td>
+                            <td>{{lib.editorial}}</td>
+                            <td><a routerLink="/editar-libro/{{lib.isbn}}" class="btn btn-success">Editar</a> | 
+                                <a class="btn btn-danger">Borrar</a> 
+                            </td>
+                        </tr>                        
+                    }@empty {
+                        No hay libros para mostrar
+                    }
                 </tbody>
             </table>
         </div>
-
     </div>
 </div>

@@ -4,7 +4,7 @@
         Editar libros
     </div>
     <div class="card-body">
-        <form>
+        <form [formGroup]="formularioDeLibros" (ngSubmit)="enviarDatos()">
             <!-- bs5-form-input -->
             <div class="mb-3">
                 <label for="" class="form-label">Título</label>

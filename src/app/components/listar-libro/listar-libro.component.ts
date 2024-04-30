@@ -14,6 +14,7 @@ export class ListarLibroComponent implements OnInit {
   ngOnInit(): void {
     this.crudService.ObtenerLibros().subscribe(respuesta => {
       console.log(respuesta);
+      this.Libros=respuesta;
     })
 
   }
