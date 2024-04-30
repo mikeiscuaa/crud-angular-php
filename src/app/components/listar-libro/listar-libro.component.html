@@ -26,7 +26,7 @@
                             <td>{{lib.anio}}</td>
                             <td>{{lib.editorial}}</td>
                             <td><a routerLink="/editar-libro/{{lib.isbn}}" class="btn btn-success">Editar</a> | 
-                                <a class="btn btn-danger">Borrar</a> 
+                                <a (click)="borrarRegistro(iControl, lib.isbn, lib.titulo)"  class="btn btn-danger">Borrar</a> 
                             </td>
                         </tr>                        
                     }@empty {
